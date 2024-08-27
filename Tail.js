@@ -28,8 +28,9 @@ class Tail {
         const velocity = worm.head.velocity.x * normal.x + worm.head.velocity.y * normal.y;
         worm.head.velocity = Tools.addVector(worm.head.velocity, Tools.multiplyVector(normal, velocity * -2 + 100));
         worm.head.position = Tools.addVector(closestPoint, Tools.multiplyVector(normal, 10));
-        if (worm.tail.length > 1 && !toothless) {
+        if (worm.tail.length > 1 && !toothless && worm.gracetime <= 0) {
           worm.tail.pop();
+          worm.gracetime = 1;
         }
       }
     });

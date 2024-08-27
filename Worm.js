@@ -1,9 +1,10 @@
 class Worm {
   constructor(game, style, position) {
     this.game = game;
-    this.idle = 5;
+    this.idle = 0;
     this.break = false;
     this.turn = 0;
+    this.gracetime = 1;
     this.head = new Head(game, style, position);
     this.tail = [];
     this.tail.push(new Tail(game, Tools.addVector(position, Tools.randomNormal())));
@@ -14,6 +15,10 @@ class Worm {
 
   act(seconds, others) {
     this.checkFood();
+
+    if (this.gracetime > 0) {
+      this.gracetime -= seconds;
+    }
 
     if (this.idle > 0) {
       this.idle -= seconds;
