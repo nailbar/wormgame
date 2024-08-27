@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<style>
+body, head {
+  margin: 0;
+  padding: 0;
+}
+#canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#info {
+  position: absolute;
+  color: gray;
+}
+#info p {
+  margin: 5px;
+}
+</style>
+<title>Worm game</title>
+</head>
+<body>
+<div id="info">
+  <p><strong>Worm Game by Nailbar (nailbar.io)</strong></p>
+  <p>This is a rewrite of my first "real" game, I made in C++ back in 2004, when I was learning programming.</p>
+  <p>This version uses the same design, logic, and rules as the original one with the main difference being this one is not limited to 640 x 480 pixels.</p>
+  <p>See file nwn105_main.cpp for original source (it's horrible).</p>
+  <p>Slim worm controls: A, S, D.</p>
+  <p>Fat worm controls: J, K, L or arrow keys left, down, right.</p>
+  <p>Inactivity for 5 seconds gives control back to the computer.</p>
+  <p>Take control of a worm to dismiss this message.</p>
+  <p><em>Nailbar 2024</em></p>
+</div>
+<canvas id="canvas" width="640" height="480"></canvas>
+<script src="Tools.js"></script>
+<script src="Food.js"></script>
+<script src="Tail.js"></script>
+<script src="Head.js"></script>
+<script src="Worm.js"></script>
+<script src="Game.js"></script>
+<script src="index.js"></script>
+</body>
