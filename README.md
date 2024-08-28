@@ -10,4 +10,6 @@ Fat worm controls: J, K, L or arrow keys left, down, right.
 Inactivity for 5 seconds gives control back to the computer.
 Take control of a worm to dismiss this message.
 
+Demo at [nailbar.io](https://nailbar.io/random/wormgame).
+
 *Nailbar 2024*
